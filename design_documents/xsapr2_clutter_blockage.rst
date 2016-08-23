@@ -4,7 +4,7 @@ Design for Clutter Analysis for the ENA X-SAPR2
 
 Introduction and Aims
 =====================
-The Scanning ARM X-band Radar version 2 (X-SAPR2) is located on Graciosa Island the Azores in the Eastern Northern Atlantic (ENA). The terrain for the island is shown in figure 1. The island is very small and has very steep terrain. 
+The Scanning ARM X-band Radar version 2 (X-SAPR2) is located on Graciosa Island the Azores in the Eastern Northern Atlantic (ENA). The terrain for the island is shown in figure 1. The island is very small and has very steep terrain with three distinct volcanic structures: Lower left is the Sierra Branca complex, upper structure is the Sierra das Fontes complex and on the lower right tip of the island is the Caldera volcano or "central unit" (see figure 5 of [1]). 
 
 .. figure:: ./ENA.png
    :scale: 50 %
@@ -14,7 +14,7 @@ The Scanning ARM X-band Radar version 2 (X-SAPR2) is located on Graciosa Island 
    the island.
 
 This causes significant clutter and beam blockage. Figure 2 shows very early
-data from the radar being run in test mode. Clutter, caused by the nearby hills,  is clearly seen in the uncorrected reflectivity. The purpose of this work is to characterize beam blocking by terrain and obstruction by other objects not captured in the terrain data. 
+data from the radar being run in test mode. Clutter, caused by the nearby volcanic structures,  is clearly seen in the uncorrected reflectivity. The purpose of this work is to characterize beam blocking by terrain and obstruction by other objects not captured in the terrain data. 
 
 
 .. figure:: ./ENA_and_radar.png
@@ -22,15 +22,15 @@ data from the radar being run in test mode. Clutter, caused by the nearby hills,
    :alt: ENA terrain 
    
    Figure 2: 0.5 degree constant elevation scan from the X-SAPR two with contour
-   lines of terrain height overlaid. The two closest peaks are apparent in the
-   clutter but the peak behind appears conpletely blocked.
+   lines of terrain height overlaid. The Sierra Branca and Sierra das Fontes are apparent in the
+   clutter but the Central Caldera behind appears conpletely blocked.
  
 
 Methodology
 ===========
 Beam blockage due to terrain can be calculated geometrically using a digital
 elevation model file and assuming 4/3 earth radius propagation. We will be using
-the BeamBlock method from the open source PyRadarMet [1]. This allows arbitrary
+the BeamBlock method from the open source PyRadarMet [2]. This allows arbitrary
 scan patterns to be created and blockage flags to be generated. We will build an
 interface to the code, through Py-ART, that will calculate terrain induced
 reduction in signal for any given scan mode. 
@@ -117,4 +117,6 @@ This task will be carried out by Scott Collis at Argonne National Laboratory wit
 
 here is no impact on operations, however the work will delay other products work being carried out by Translator team at Argonne.
 
-[1] https://github.com/nguy/PyRadarMet
+[1] Hipólito, A., Madeira, J., Carmo, R. and Gaspar, J.L. (2013) Neotectonics of Graciosa Island (Azores): a contribution to seismic hazard assessment of a volcanic area in a complex geodynamic setting.  Annals of Geophysics 56 (6), S0677.
+
+[2] https://github.com/nguy/PyRadarMet
