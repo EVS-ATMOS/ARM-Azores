@@ -111,6 +111,9 @@ mode is changed.
 These techniques (the DEM based and data based techniques) are general to any
 radar so can be easily transported to other systems within the ARM program.
 
+Finally we will also investigate looking at polarimetric data quality
+fingerprints of partial beam blockage such as those discussed in [3] and [4].
+
 Effort, staff and Impact
 ========================
 This task will be carried out by Scott Collis at Argonne National Laboratory with assistance from Jonathan Helmus as the task has components the cross aspects of the radar plan. It is expected this project, due to the complexity and need to capture data, will cross into FY17. A rough estimate is around 160 hours of effort. 
@@ -120,3 +123,7 @@ here is no impact on operations, however the work will delay other products work
 [1] Hipólito, A., Madeira, J., Carmo, R. and Gaspar, J.L. (2013) Neotectonics of Graciosa Island (Azores): a contribution to seismic hazard assessment of a volcanic area in a complex geodynamic setting.  Annals of Geophysics 56 (6), S0677.
 
 [2] https://github.com/nguy/PyRadarMet
+
+[3 ]Lang, T. J., S. W. Nesbitt, and L. D. Carey, 2009: On the correction of partial beam blockage in polarimetric radar data. J. Atmos. Oceanic Technol., 26, 943–957.
+
+[4] https://github.com/nasa/PyBlock/blob/master/notebooks/PyBlock_Demo.ipynb
