@@ -4,7 +4,12 @@ Design for Clutter Analysis for the ENA X-SAPR2
 
 Introduction and Aims
 =====================
-The Scanning ARM X-band Radar version 2 (X-SAPR2) is located on Graciosa Island the Azores in the Eastern Northern Atlantic (ENA). The terrain for the island is shown in figure 1. The island is very small and has very steep terrain with three distinct volcanic structures: Lower left is the Sierra Branca complex, upper structure is the Sierra das Fontes complex and on the lower right tip of the island is the Caldera volcano or "central unit" (see figure 5 of [1]). 
+The Scanning ARM X-band Radar version 2 (X-SAPR2) is located on Graciosa Island
+the Azores in the Eastern Northern Atlantic (ENA). The terrain for the island is
+shown in figure 1. The island is very small and has very steep terrain with
+three distinct volcanic structures: Lower left is the Sierra Branca complex, 
+upper structure is the Sierra das Fontes complex and on the lower right tip of 
+the island is the Caldera volcano or "central unit" (see figure 5 of [1]). 
 
 .. figure:: ./ENA.png
    :scale: 50 %
@@ -14,7 +19,10 @@ The Scanning ARM X-band Radar version 2 (X-SAPR2) is located on Graciosa Island 
    the island.
 
 This causes significant clutter and beam blockage. Figure 2 shows very early
-data from the radar being run in test mode. Clutter, caused by the nearby volcanic structures,  is clearly seen in the uncorrected reflectivity. The purpose of this work is to characterize beam blocking by terrain and obstruction by other objects not captured in the terrain data. 
+data from the radar being run in test mode. Clutter, caused by the nearby volcanic 
+structures, is clearly seen in the uncorrected reflectivity. The purpose of this 
+work is to characterize beam blocking by terrain and obstruction by other objects 
+not captured in the terrain data. 
 
 
 .. figure:: ./ENA_and_radar.png
@@ -69,7 +77,10 @@ blockage.
 
 The photo in figure 4 shows siting pictures for S-POL with a stand of ironwood
 trees clearly shown with a small patch higher than the rest. These are the cause
-of the blockage. The exact method to create a map of blockage caused attenuation (in dB) or flag will be a subject of some trail and error of existing literature. However for the purposes of illustration we experimented with an implementation in the process of writing this report.
+of the blockage. The exact method to create a map of blockage caused attenuation 
+(in dB) or flag will be a subject of some trail and error of existing literature. 
+However for the purposes of illustration we experimented with an implementation 
+in the process of writing this design.
 
 .. figure:: ./atten_2p.png
    :scale: 40 %
@@ -87,7 +98,7 @@ dividing) an average reflectivity at elevations that would not contain blockage.
 The data was then passed through a 20 point boxcar smoother. We still see,
 however, some undulations and increases in signal with range. This is unphysical
 if interpreted as an attenuation map. This is could be due to some residual
-variability in the reflectivity patterns or, perhaps some sidelobe
+variability in the reflectivity patterns or, perhaps some side-lobe
 contamination. 
 
 The right hand side of figure 5 was obtained by first identifying rays with
@@ -111,19 +122,20 @@ mode is changed.
 These techniques (the DEM based and data based techniques) are general to any
 radar so can be easily transported to other systems within the ARM program.
 
-Finally we will also investigate looking at polarimetric data quality
-fingerprints of partial beam blockage such as those discussed in [3] and [4].
-
 Effort, staff and Impact
 ========================
-This task will be carried out by Scott Collis at Argonne National Laboratory with assistance from Jonathan Helmus as the task has components the cross aspects of the radar plan. It is expected this project, due to the complexity and need to capture data, will cross into FY17. A rough estimate is around 160 hours of effort. 
+This task will be carried out by Scott Collis at Argonne National Laboratory 
+with assistance from Jonathan Helmus as the task has components the cross 
+aspects of the radar plan. It is expected this project, due to the complexity 
+and need to capture data, will cross into FY17. A rough estimate is around 160 
+hours of effort. 
 
-here is no impact on operations, however the work will delay other products work being carried out by Translator team at Argonne.
+There is no impact on operations, however the work will delay other products work 
+being carried out by Translator team at Argonne.
 
-[1] Hipólito, A., Madeira, J., Carmo, R. and Gaspar, J.L. (2013) Neotectonics of Graciosa Island (Azores): a contribution to seismic hazard assessment of a volcanic area in a complex geodynamic setting.  Annals of Geophysics 56 (6), S0677.
+[1] Hipólito, A., Madeira, J., Carmo, R. and Gaspar, J.L. (2013) Neotectonics of 
+Graciosa Island (Azores): a contribution to seismic hazard assessment of a volcanic 
+area in a complex geodynamic setting.  Annals of Geophysics 56 (6), S0677.
 
 [2] https://github.com/nguy/PyRadarMet
 
-[3 ]Lang, T. J., S. W. Nesbitt, and L. D. Carey, 2009: On the correction of partial beam blockage in polarimetric radar data. J. Atmos. Oceanic Technol., 26, 943–957.
-
-[4] https://github.com/nasa/PyBlock/blob/master/notebooks/PyBlock_Demo.ipynb
